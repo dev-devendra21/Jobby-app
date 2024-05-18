@@ -1,0 +1,54 @@
+.home-bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+  background-size: cover;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.hero-section {
+  width: 80%;
+}
+
+.hero-section-heading {
+  color: #ffffff;
+}
+
+.hero-section-description {
+  color: #cbd5e1;
+}
+
+.find-jobs-btn {
+  outline: none;
+  border-width: 0px;
+  color: #ffffff;
+  background-color: #6366f1;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.job-link-btn {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home-bg-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    padding: 40px;
+  }
+  .hero-section {
+    width: 50%;
+  }
+
+  .hero-section-heading {
+    font-size: 50px;
+  }
+
+  .hero-section-description {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,13 @@
+.similar-jobs-card-container {
+  background-color: #202020;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .similar-jobs-card-container {
+    width: 320px;
+  }
+}

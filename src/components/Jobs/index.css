@@ -1,0 +1,209 @@
+.jobs-bg-container {
+  background-color: #000000;
+  background-size: cover;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jobs-container {
+  margin-top: 20px;
+  width: 90%;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  height: 220px;
+  align-items: center;
+}
+
+.retry-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+  justify-content: center;
+}
+
+.retry-btn {
+  width: 100px;
+  padding: 15px;
+  color: #f8fafc;
+  background-color: #4f46e5;
+  border-radius: 8px;
+}
+
+.profile-card-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 20px;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.name {
+  color: #6366f1;
+}
+
+.short-bio {
+  margin-top: 0px;
+  color: #2c364c;
+}
+
+.type-of-employment-container {
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-heading {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.type-of-employment-list {
+  list-style-type: none;
+  padding-left: 0px;
+  line-height: 30px;
+}
+
+.salary-range-list {
+  list-style-type: none;
+  padding-left: 0px;
+  line-height: 30px;
+}
+
+.sidebar-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.type-label-text {
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #7e858e;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  width: 100%;
+  padding: 8px;
+  border-width: 0px;
+  font-size: 20px;
+}
+
+.search-icon-btn {
+  border-width: 0px;
+  background-color: #272727;
+  padding: 8px;
+  outline: none;
+  width: 70px;
+}
+
+.search-icon {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.job-card-item-list-container {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.no-jobs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.no-jobs-img {
+  width: 250px;
+  height: 300px;
+}
+
+.no-jobs-heading {
+  color: #f8fafc;
+}
+
+.no-jobs-paragraph {
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.failure-job-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.failure-img {
+  width: 100%;
+}
+
+.failure-job-card-heading {
+  color: #f8fafc;
+  font-family: Roboto;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.failure-job-card-paragraph {
+  color: #cbd5e1;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .jobs-container {
+    margin-top: 30px;
+    display: flex;
+    width: 85%;
+  }
+
+  .job-list-container {
+    margin-left: 30px;
+  }
+
+  .search-input-container {
+    width: 300px;
+  }
+
+  .profile-card-container {
+    width: 280px;
+    height: 220px;
+    border-radius: 25px;
+  }
+
+  .type-of-employment-container {
+    width: 280px;
+  }
+
+  .no-jobs-img {
+    width: 350px;
+  }
+}
