@@ -60,7 +60,8 @@
   color: #2c364c;
 }
 
-.type-of-employment-container {
+.type-of-employment-container,
+.type-of-location-container {
   border-top: 1px solid #f1f5f9;
   border-bottom: 1px solid #f1f5f9;
 }
@@ -70,7 +71,8 @@
   font-size: 16px;
 }
 
-.type-of-employment-list {
+.type-of-employment-list,
+.type-of-location-list {
   list-style-type: none;
   padding-left: 0px;
   line-height: 30px;

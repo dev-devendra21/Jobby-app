@@ -5,6 +5,9 @@
   align-items: center;
   padding: 20px;
   height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .website-logo-img {

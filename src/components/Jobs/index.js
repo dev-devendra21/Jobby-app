@@ -25,6 +25,29 @@ const employmentTypesList = [
   },
 ]
 
+const locationList = [
+  {
+    label: 'Hyderabad',
+    locationId: 'HYDERABAD',
+  },
+  {
+    label: 'Bangalore',
+    locationId: 'BANGALORE',
+  },
+  {
+    label: 'Chennai',
+    locationId: 'CHENNAI',
+  },
+  {
+    label: 'Delhi',
+    locationId: 'DELHI',
+  },
+  {
+    label: 'Mumbai',
+    locationId: 'MUMBAI',
+  },
+]
+
 const salaryRangesList = [
   {
     salaryRangeId: '1000000',
@@ -59,6 +82,7 @@ export default class Jobs extends Component {
     jobCardApiStatus: apiStatusList.inProcess,
     salaryRange: '',
     employmentType: [],
+    location: [],
   }
 
   componentDidMount() {
@@ -121,6 +145,31 @@ export default class Jobs extends Component {
     }
   }
 
+  setLocation = event => {
+    const {location} = this.state
+    const value = location.includes(event.target.value)
+    if (value) {
+      const filterValue = location.filter(
+        eachValue => eachValue !== event.target.value,
+      )
+      this.setState(
+        {
+          location: filterValue,
+          jobCardApiStatus: apiStatusList.inProcess,
+        },
+        this.getJobList,
+      )
+    } else {
+      this.setState(
+        previousValue => ({
+          location: [...previousValue.location, event.target.value],
+          jobCardApiStatus: apiStatusList.inProcess,
+        }),
+        this.getJobList,
+      )
+    }
+  }
+
   getProfileCard = async () => {
     const profileApiUrl = 'https://apis.ccbp.in/profile'
     const jwtToken = Cookies.get('jwt_token')
@@ -164,10 +213,12 @@ export default class Jobs extends Component {
 
   getJobList = async () => {
     const jwtToken = Cookies.get('jwt_token')
-    const {salaryRange, searchInput, employmentType} = this.state
+    const {salaryRange, searchInput, employmentType, location} = this.state
     const jobsApiUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join(
       ',',
-    )}&minimum_package=${salaryRange}&search=${searchInput}`
+    )}&minimum_package=${salaryRange}&location=${location.join(
+      ',',
+    )}&search=${searchInput}`
     const options = {
       headers: {Authorization: `Bearer ${jwtToken}`},
       method: 'GET',
@@ -377,6 +428,27 @@ export default class Jobs extends Component {
                   htmlFor={eachSalaryRange.salaryRangeId}
                 >
                   {eachSalaryRange.label}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="type-of-location-container">
+          <h1 className="sidebar-heading">Location</h1>
+          <ul className="type-of-location-list">
+            {locationList.map(eachlocation => (
+              <li key={eachlocation.locationId} className="sidebar-list">
+                <input
+                  id={eachlocation.locationId}
+                  value={eachlocation.locationId}
+                  type="checkbox"
+                  onChange={this.setLocation}
+                />
+                <label
+                  className="type-label-text"
+                  htmlFor={eachlocation.locationId}
+                >
+                  {eachlocation.label}
                 </label>
               </li>
             ))}
